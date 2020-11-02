@@ -1,0 +1,228 @@
+
+-- require("functions")
+-- local CONVERT_TYPE = {
+-- 	["ImGuiID"] = "int",
+-- 	["ImGuiCol"] = "int",
+-- 	["ImGuiCond"] = "int",
+-- 	["ImGuiDataType"] = "int",
+-- 	["ImGuiDir"] = "int",
+-- 	["ImGuiKey"] = "int",
+-- 	["ImGuiNavInput"] = "int",
+-- 	["ImGuiMouseButton"] = "int",
+-- 	["ImGuiMouseCursor"] = "int",
+-- 	["ImGuiStyleVar"] = "int",
+-- 	["ImDrawCornerFlags"] = "int",
+-- 	["ImDrawListFlags"] = "int",
+-- 	["ImFontAtlasFlags"] = "int",
+-- 	["ImGuiBackendFlags"] = "int",
+-- 	["ImGuiButtonFlags"] = "int",
+-- 	["ImGuiColorEditFlags"] = "int",
+-- 	["ImGuiConfigFlags"] = "int",
+-- 	["ImGuiComboFlags"] = "int",
+-- 	["ImGuiDockNodeFlags"] = "int",
+-- 	["ImGuiDragDropFlags"] = "int",
+-- 	["ImGuiFocusedFlags"] = "int",
+-- 	["ImGuiHoveredFlags"] = "int",
+-- 	["ImGuiInputTextFlags"] = "int",
+-- 	["ImGuiKeyModFlags"] = "int",
+-- 	["ImGuiPopupFlags"] = "int",
+-- 	["ImGuiSelectableFlags"] = "int",
+-- 	["ImGuiSliderFlags"] = "int",
+-- 	["ImGuiTabBarFlags"] = "int",
+-- 	["ImGuiTabItemFlags"] = "int",
+-- 	["ImGuiTreeNodeFlags"] = "int",
+-- 	["ImGuiViewportFlags"] = "int",
+-- 	["ImGuiWindowFlags"] = "int",
+-- 	["ImGuiDataAuthority"] = "int",
+-- 	["ImGuiLayoutType"] = "int",
+-- 	["ImGuiButtonFlags"] = "int",
+-- 	["ImGuiColumnsFlags"] = "int",
+-- 	["ImGuiItemFlags"] = "int",
+-- 	["ImGuiItemStatusFlags"] = "int",
+-- 	["ImGuiNavHighlightFlags"] = "int",
+-- 	["ImGuiNavDirSourceFlags"] = "int",
+-- 	["ImGuiNavMoveFlags"] = "int",
+-- 	["ImGuiNextItemDataFlags"] = "int",
+-- 	["ImGuiNextWindowDataFlags"] = "int",
+-- 	["ImGuiSeparatorFlags"] = "int",
+-- 	["ImGuiTextFlags"] = "int",
+-- 	["ImGuiTooltipFlags"] = "int",
+
+-- 	["ImGuiInputReadMode"] = "int",
+	
+-- }
+-- function string.split(input, delimiter)
+--     input = tostring(input)
+--     delimiter = tostring(delimiter)
+--     if (delimiter=='') then return false end
+--     local pos,arr = 0, {}
+--     -- for each divider found
+--     for st,sp in function() return string.find(input, delimiter, pos, true) end do
+--         table.insert(arr, string.sub(input, pos, st - 1))
+--         pos = sp + 1
+--     end
+--     table.insert(arr, string.sub(input, pos))
+--     return arr
+-- end
+
+-- local formatFile = function(functionInfos,outDir)
+-- 	local HEADER_FORMAT = [[
+-- #ifndef IMGUI_LUA_H
+-- #define IMGUI_LUA_H
+
+-- #include <string>
+-- #include "FYDC.h"
+-- class IMGUI_LUA {
+    
+-- public:
+--     static IMGUI_LUA* getInstance();
+-- %s
+
+-- private:
+--     static IMGUI_LUA* __instance;
+--     IMGUI_LUA(){};
+    
+-- };
+
+-- #endif /* IMGUI_LUA_H */
+-- 	]]
+-- 	local preDefineList = {}
+-- 	local regDefineList = {}
+-- 	local nameMap = {}
+-- 	for _,info in ipairs(functionInfos) do
+-- 		if not nameMap[info.name] then
+-- 			nameMap[info.name] = true
+-- 			local preDefine = string.format("    FValue %s(FValueVector vector);",info.name)
+-- 			local regDefine = string.format('    REG_OBJ_FUNC(IMGUI_LUA::%s,IMGUI_LUA::getInstance(),IMGUI_LUA::,"IMGUI_LUA::%s")',info.name,info.name)
+-- 			table.insert(preDefineList,preDefine)
+-- 			table.insert(regDefineList,regDefine)
+-- 		end
+-- 	end
+-- 	local regContent = string.format("\n\nvoid registerFunc(){\n\n%s\n\n}",table.concat(regDefineList,"\n"))
+	
+-- 	local content = table.concat(preDefineList,"\n") .. regContent
+-- 	local headerContent = string.format(HEADER_FORMAT,content)
+-- 	local file = io.open(outDir .. "IMGUI_LUA.h","wb")
+-- 	file:write(headerContent)
+-- 	file:close()
+
+-- 	local CPP_CONTENT = [[
+-- #include "IMGUI_LUA.h"
+-- IMGUI_LUA* IMGUI_LUA::__instance = nullptr;
+
+-- IMGUI_LUA* IMGUI_LUA::getInstance()
+-- {
+--     if(__instance == nullptr){
+--         __instance = new IMGUI_LUA();
+--     }
+--     return __instance;
+-- }
+
+-- %s
+-- 	]]
+
+-- 	local baseConvertMap = {
+-- 		["int"] = "asInt",
+-- 		["float"] = "asFloat",
+-- 		["double"] = "asDouble",
+-- 		["bool"] = "asBool",
+-- 	}
+-- 	local typeMap = {}
+-- 	local processImplament = function(info)
+-- 		local str = "" 
+-- 		local paramater = info.paramater
+-- 		local hasConst = false
+-- 		if string.find(info.paramater,"const") then
+-- 			hasConst = true
+-- 			paramater = string.gsub(info.paramater,"const ","")
+-- 		end
+-- 		local iter = string.gmatch(paramater,"([%w_%&%*]+) ([%w_%&%*]+)")
+-- 		local args = {}
+-- 		local idx = -1
+-- 		for type,value in iter do
+-- 			idx = idx + 1
+-- 			if type == "T*" or type == "T" then
+-- 				return "    //TODO"
+-- 			else
+-- 				if not hasConst and type == "char*" then
+-- 					str = str .. string.format("    string %s_temp = vector[%d].asString();\n    char* %s = %s_temp.c_str();\n",value,idx,value,value)
+-- 				elseif hasConst and type == "char*" then
+-- 					str = str .. string.format("    string %s_temp = vector[%d].asString();\n    const char* %s = %s_temp.c_str();\n",value,idx,value,value)
+-- 				elseif baseConvertMap[type] or baseConvertMap[CONVERT_TYPE[type]] then
+-- 					type = CONVERT_TYPE[type] or type
+-- 					str = str .. string.format("    %s %s = vector[%d].%s();\n",type,value,idx,baseConvertMap[type])
+-- 				else
+-- 					return "    //TODO"
+-- 				end
+-- 			end
+-- 			table.insert(args,value)
+-- 		end
+-- 		local ret = info.ret
+-- 		if CONVERT_TYPE[ret] then
+-- 			ret = CONVERT_TYPE[ret]
+-- 		end
+-- 		local param = table.concat(args,",")
+-- 		if ret == "void" then
+-- 			str = str .. string.format("    ImGui::%s(%s)\n",info.name,param)
+-- 			str = str .. "    return FValue();"
+-- 			return str
+-- 		elseif baseConvertMap[ret] then
+-- 			str = str .. "    "..info.ret.." ret = " ..string.format("ImGui::%s(%s);\n",info.name,param)
+-- 			str = str .. "    return FValue(ret);"
+-- 			return str
+-- 		else
+-- 			return "    //TODO"
+-- 		end
+-- 		return str
+-- 	end
+-- 	local list = {}
+-- 	nameMap = {}
+-- 	for _,info in ipairs(functionInfos) do
+-- 		if not nameMap[info.name] then
+-- 			nameMap[info.name] = true
+-- 			local process = processImplament(info)
+-- 			local implament = string.format("//%s %s(%s)\nFValue IMGUI_LUA::%s(FValueVector vector)\n{\n%s\n}\n",info.ret,info.name,info.paramater,info.name,process)
+-- 			table.insert(list,implament)
+-- 		end
+-- 	end
+-- 	local content = string.format(CPP_CONTENT,table.concat(list,"\n"))
+-- 	local file = io.open(outDir .. "IMGUI_LUA.cpp","wb")
+-- 	file:write(content)
+-- 	file:close()
+-- end
+
+-- local dir = "/Users/jingfeng/Documents/imgui/"
+-- local files = {
+-- 	"imgui.h",
+-- 	"imgui_internal.h"
+-- }
+
+-- local listFunction = {}
+-- for _,fileName in ipairs(files) do
+-- 	print("fileName = ",fileName)
+-- 	local path = dir .. fileName
+-- 	local file = io.open(path,"rb")
+-- 	local content = file:read("*a")
+-- 	file:close()
+-- 	content = string.gsub(content,"//.-\n","\n")
+-- 	content = string.gsub(content,"\r\n","\n")
+-- 	content = string.gsub(content,"\n\n","\n")
+-- 	content = string.gsub(content,"	"," ")
+-- 	content = string.gsub(content,"[ ]+"," ")
+
+-- 	local iter = string.gmatch(content,"namespace ImGui\n%b{}")
+
+-- 	for value in iter do
+-- 		local funcIter = string.gmatch(value,"([%w_%&%*]+) ([%w_]+)%((.-)%)")
+-- 		for ret,name,paramater in funcIter do
+-- 			table.insert(listFunction,{ret = ret,name = name,paramater = paramater})
+-- 		end
+		
+-- 	end
+-- end
+-- if #listFunction > 0 then
+-- 	formatFile(listFunction,"./")
+-- end
+print("lfs == ",lfs)
+require("lfs")
+print("11111")
