@@ -2,6 +2,7 @@
 #import <Metal/Metal.h>
 
 #include "imgui.h"
+#include "imgui_internal.h"
 #include "imgui_impl_metal.h"
 
 #if TARGET_OS_OSX

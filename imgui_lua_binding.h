@@ -8390,28 +8390,28 @@ fail:
 
 static int _wrap_TextV(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  va_list arg2 ;
-  va_list *argp2 ;
+//   char *arg1 = (char *) 0 ;
+//   va_list arg2 ;
+//   va_list *argp2 ;
   
-  SWIG_check_num_args("ImGui::TextV",2,2)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TextV",1,"char const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::TextV",2,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
+//   SWIG_check_num_args("ImGui::TextV",2,2)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TextV",1,"char const *");
+//   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::TextV",2,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TextV",2,SWIGTYPE_p_va_list);
-  }
-  arg2 = *argp2;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TextV",2,SWIGTYPE_p_va_list);
+//   }
+//   arg2 = *argp2;
   
-  ImGui::TextV((char const *)arg1,arg2);
+//   ImGui::TextV((char const *)arg1,arg2);
   
-  return SWIG_arg;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
@@ -8445,35 +8445,35 @@ fail:
 
 static int _wrap_TextColoredV(lua_State* L) {
   int SWIG_arg = 0;
-  ImVec4 *arg1 = 0 ;
-  char *arg2 = (char *) 0 ;
-  va_list arg3 ;
-  va_list *argp3 ;
+//   ImVec4 *arg1 = 0 ;
+//   char *arg2 = (char *) 0 ;
+//   va_list arg3 ;
+//   va_list *argp3 ;
   
-  SWIG_check_num_args("ImGui::TextColoredV",3,3)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ImGui::TextColoredV",1,"ImVec4 const &");
-  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::TextColoredV",2,"char const *");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::TextColoredV",3,"va_list");
+//   SWIG_check_num_args("ImGui::TextColoredV",3,3)
+//   if(!lua_isuserdata(L,1)) SWIG_fail_arg("ImGui::TextColoredV",1,"ImVec4 const &");
+//   if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::TextColoredV",2,"char const *");
+//   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::TextColoredV",3,"va_list");
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ImVec4,0))){
-    SWIG_fail_ptr("TextColoredV",1,SWIGTYPE_p_ImVec4);
-  }
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ImVec4,0))){
+//     SWIG_fail_ptr("TextColoredV",1,SWIGTYPE_p_ImVec4);
+//   }
   
-  arg2 = (char *)lua_tostring(L, 2);
+//   arg2 = (char *)lua_tostring(L, 2);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TextColoredV",3,SWIGTYPE_p_va_list);
-  }
-  arg3 = *argp3;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TextColoredV",3,SWIGTYPE_p_va_list);
+//   }
+//   arg3 = *argp3;
   
-  ImGui::TextColoredV((ImVec4 const &)*arg1,(char const *)arg2,arg3);
+//   ImGui::TextColoredV((ImVec4 const &)*arg1,(char const *)arg2,arg3);
   
-  return SWIG_arg;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
@@ -8500,28 +8500,28 @@ fail:
 
 static int _wrap_TextDisabledV(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  va_list arg2 ;
-  va_list *argp2 ;
+//   char *arg1 = (char *) 0 ;
+//   va_list arg2 ;
+//   va_list *argp2 ;
   
-  SWIG_check_num_args("ImGui::TextDisabledV",2,2)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TextDisabledV",1,"char const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::TextDisabledV",2,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
+//   SWIG_check_num_args("ImGui::TextDisabledV",2,2)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TextDisabledV",1,"char const *");
+//   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::TextDisabledV",2,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TextDisabledV",2,SWIGTYPE_p_va_list);
-  }
-  arg2 = *argp2;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TextDisabledV",2,SWIGTYPE_p_va_list);
+//   }
+//   arg2 = *argp2;
   
-  ImGui::TextDisabledV((char const *)arg1,arg2);
+//   ImGui::TextDisabledV((char const *)arg1,arg2);
   
-  return SWIG_arg;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
@@ -8548,28 +8548,28 @@ fail:
 
 static int _wrap_TextWrappedV(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  va_list arg2 ;
-  va_list *argp2 ;
+//   char *arg1 = (char *) 0 ;
+//   va_list arg2 ;
+//   va_list *argp2 ;
   
-  SWIG_check_num_args("ImGui::TextWrappedV",2,2)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TextWrappedV",1,"char const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::TextWrappedV",2,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
+//   SWIG_check_num_args("ImGui::TextWrappedV",2,2)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TextWrappedV",1,"char const *");
+//   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::TextWrappedV",2,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TextWrappedV",2,SWIGTYPE_p_va_list);
-  }
-  arg2 = *argp2;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TextWrappedV",2,SWIGTYPE_p_va_list);
+//   }
+//   arg2 = *argp2;
   
-  ImGui::TextWrappedV((char const *)arg1,arg2);
+//   ImGui::TextWrappedV((char const *)arg1,arg2);
   
-  return SWIG_arg;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
@@ -8599,31 +8599,31 @@ fail:
 
 static int _wrap_LabelTextV(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  char *arg2 = (char *) 0 ;
-  va_list arg3 ;
-  va_list *argp3 ;
+//   char *arg1 = (char *) 0 ;
+//   char *arg2 = (char *) 0 ;
+//   va_list arg3 ;
+//   va_list *argp3 ;
   
-  SWIG_check_num_args("ImGui::LabelTextV",3,3)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::LabelTextV",1,"char const *");
-  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::LabelTextV",2,"char const *");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::LabelTextV",3,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
-  arg2 = (char *)lua_tostring(L, 2);
+//   SWIG_check_num_args("ImGui::LabelTextV",3,3)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::LabelTextV",1,"char const *");
+//   if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::LabelTextV",2,"char const *");
+//   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::LabelTextV",3,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
+//   arg2 = (char *)lua_tostring(L, 2);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("LabelTextV",3,SWIGTYPE_p_va_list);
-  }
-  arg3 = *argp3;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("LabelTextV",3,SWIGTYPE_p_va_list);
+//   }
+//   arg3 = *argp3;
   
-  ImGui::LabelTextV((char const *)arg1,(char const *)arg2,arg3);
+//   ImGui::LabelTextV((char const *)arg1,(char const *)arg2,arg3);
   
-  return SWIG_arg;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
@@ -8650,28 +8650,28 @@ fail:
 
 static int _wrap_BulletTextV(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  va_list arg2 ;
-  va_list *argp2 ;
+//   char *arg1 = (char *) 0 ;
+//   va_list arg2 ;
+//   va_list *argp2 ;
   
-  SWIG_check_num_args("ImGui::BulletTextV",2,2)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::BulletTextV",1,"char const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::BulletTextV",2,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
+//   SWIG_check_num_args("ImGui::BulletTextV",2,2)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::BulletTextV",1,"char const *");
+//   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::BulletTextV",2,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("BulletTextV",2,SWIGTYPE_p_va_list);
-  }
-  arg2 = *argp2;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("BulletTextV",2,SWIGTYPE_p_va_list);
+//   }
+//   arg2 = *argp2;
   
-  ImGui::BulletTextV((char const *)arg1,arg2);
+//   ImGui::BulletTextV((char const *)arg1,arg2);
   
-  return SWIG_arg;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
@@ -22147,134 +22147,135 @@ static int _wrap_TreeNode(lua_State* L) {
 
 static int _wrap_TreeNodeV__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  char *arg2 = (char *) 0 ;
-  va_list arg3 ;
-  va_list *argp3 ;
-  bool result;
+//   char *arg1 = (char *) 0 ;
+//   char *arg2 = (char *) 0 ;
+//   va_list arg3 ;
+//   va_list *argp3 ;
+//   bool result;
   
-  SWIG_check_num_args("ImGui::TreeNodeV",3,3)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TreeNodeV",1,"char const *");
-  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::TreeNodeV",2,"char const *");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::TreeNodeV",3,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
-  arg2 = (char *)lua_tostring(L, 2);
+//   SWIG_check_num_args("ImGui::TreeNodeV",3,3)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TreeNodeV",1,"char const *");
+//   if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::TreeNodeV",2,"char const *");
+//   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::TreeNodeV",3,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
+//   arg2 = (char *)lua_tostring(L, 2);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TreeNodeV",3,SWIGTYPE_p_va_list);
-  }
-  arg3 = *argp3;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TreeNodeV",3,SWIGTYPE_p_va_list);
+//   }
+//   arg3 = *argp3;
   
-  result = (bool)ImGui::TreeNodeV((char const *)arg1,(char const *)arg2,arg3);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg;
+//   result = (bool)ImGui::TreeNodeV((char const *)arg1,(char const *)arg2,arg3);
+//   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
 
 static int _wrap_TreeNodeV__SWIG_1(lua_State* L) {
   int SWIG_arg = 0;
-  void *arg1 = (void *) 0 ;
-  char *arg2 = (char *) 0 ;
-  va_list arg3 ;
-  va_list *argp3 ;
-  bool result;
+//   void *arg1 = (void *) 0 ;
+//   char *arg2 = (char *) 0 ;
+//   va_list arg3 ;
+//   va_list *argp3 ;
+//   bool result;
   
-  SWIG_check_num_args("ImGui::TreeNodeV",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ImGui::TreeNodeV",1,"void const *");
-  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::TreeNodeV",2,"char const *");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::TreeNodeV",3,"va_list");
-  arg1=(void *)SWIG_MustGetPtr(L,1,0,0,1,"TreeNodeV");
-  arg2 = (char *)lua_tostring(L, 2);
+//   SWIG_check_num_args("ImGui::TreeNodeV",3,3)
+//   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ImGui::TreeNodeV",1,"void const *");
+//   if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGui::TreeNodeV",2,"char const *");
+//   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGui::TreeNodeV",3,"va_list");
+//   arg1=(void *)SWIG_MustGetPtr(L,1,0,0,1,"TreeNodeV");
+//   arg2 = (char *)lua_tostring(L, 2);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TreeNodeV",3,SWIGTYPE_p_va_list);
-  }
-  arg3 = *argp3;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TreeNodeV",3,SWIGTYPE_p_va_list);
+//   }
+//   arg3 = *argp3;
   
-  result = (bool)ImGui::TreeNodeV((void const *)arg1,(char const *)arg2,arg3);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg;
+//   result = (bool)ImGui::TreeNodeV((void const *)arg1,(char const *)arg2,arg3);
+//   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
 
 static int _wrap_TreeNodeV(lua_State* L) {
-  int argc;
-  int argv[4]={
-    1,2,3,4
-  };
+  // int argc;
+  // int argv[4]={
+  //   1,2,3,4
+  // };
   
-  argc = lua_gettop(L);
-  if (argc == 3) {
-    int _v;
-    {
-      void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, 0, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
-    }
-    if (_v) {
-      {
-        _v = SWIG_lua_isnilstring(L,argv[1]);
-      }
-      if (_v) {
-        {
-          void *ptr;
-          if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
-            _v = 0;
-          } else {
-            _v = 1;
-          }
-        }
-        if (_v) {
-          return _wrap_TreeNodeV__SWIG_1(L);
-        }
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    {
-      _v = SWIG_lua_isnilstring(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = SWIG_lua_isnilstring(L,argv[1]);
-      }
-      if (_v) {
-        {
-          void *ptr;
-          if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
-            _v = 0;
-          } else {
-            _v = 1;
-          }
-        }
-        if (_v) {
-          return _wrap_TreeNodeV__SWIG_0(L);
-        }
-      }
-    }
-  }
+  // argc = lua_gettop(L);
+  // if (argc == 3) {
+  //   int _v;
+  //   {
+  //     void *ptr;
+  //     if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, 0, 0)) {
+  //       _v = 0;
+  //     } else {
+  //       _v = 1;
+  //     }
+  //   }
+  //   if (_v) {
+  //     {
+  //       _v = SWIG_lua_isnilstring(L,argv[1]);
+  //     }
+  //     if (_v) {
+  //       {
+  //         void *ptr;
+  //         if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
+  //           _v = 0;
+  //         } else {
+  //           _v = 1;
+  //         }
+  //       }
+  //       if (_v) {
+  //         return _wrap_TreeNodeV__SWIG_1(L);
+  //       }
+  //     }
+  //   }
+  // }
+  // if (argc == 3) {
+  //   int _v;
+  //   {
+  //     _v = SWIG_lua_isnilstring(L,argv[0]);
+  //   }
+  //   if (_v) {
+  //     {
+  //       _v = SWIG_lua_isnilstring(L,argv[1]);
+  //     }
+  //     if (_v) {
+  //       {
+  //         void *ptr;
+  //         if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
+  //           _v = 0;
+  //         } else {
+  //           _v = 1;
+  //         }
+  //       }
+  //       if (_v) {
+  //         return _wrap_TreeNodeV__SWIG_0(L);
+  //       }
+  //     }
+  //   }
+  // }
   
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'TreeNodeV'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    ImGui::TreeNodeV(char const *,char const *,va_list)\n"
-    "    ImGui::TreeNodeV(void const *,char const *,va_list)\n");
-  lua_error(L);return 0;
+  // SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'TreeNodeV'\n"
+  //   "  Possible C/C++ prototypes are:\n"
+  //   "    ImGui::TreeNodeV(char const *,char const *,va_list)\n"
+  //   "    ImGui::TreeNodeV(void const *,char const *,va_list)\n");
+  // lua_error(L);
+  return 0;
 }
 
 
@@ -22467,150 +22468,151 @@ static int _wrap_TreeNodeEx(lua_State* L) {
 
 static int _wrap_TreeNodeExV__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  ImGuiTreeNodeFlags arg2 ;
-  char *arg3 = (char *) 0 ;
-  va_list arg4 ;
-  va_list *argp4 ;
-  bool result;
+//   char *arg1 = (char *) 0 ;
+//   ImGuiTreeNodeFlags arg2 ;
+//   char *arg3 = (char *) 0 ;
+//   va_list arg4 ;
+//   va_list *argp4 ;
+//   bool result;
   
-  SWIG_check_num_args("ImGui::TreeNodeExV",4,4)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TreeNodeExV",1,"char const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ImGui::TreeNodeExV",2,"ImGuiTreeNodeFlags");
-  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("ImGui::TreeNodeExV",3,"char const *");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ImGui::TreeNodeExV",4,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
-  arg2 = (ImGuiTreeNodeFlags)lua_tonumber(L, 2);
-  arg3 = (char *)lua_tostring(L, 3);
+//   SWIG_check_num_args("ImGui::TreeNodeExV",4,4)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::TreeNodeExV",1,"char const *");
+//   if(!lua_isnumber(L,2)) SWIG_fail_arg("ImGui::TreeNodeExV",2,"ImGuiTreeNodeFlags");
+//   if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("ImGui::TreeNodeExV",3,"char const *");
+//   if(!lua_isuserdata(L,4)) SWIG_fail_arg("ImGui::TreeNodeExV",4,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
+//   arg2 = (ImGuiTreeNodeFlags)lua_tonumber(L, 2);
+//   arg3 = (char *)lua_tostring(L, 3);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TreeNodeExV",4,SWIGTYPE_p_va_list);
-  }
-  arg4 = *argp4;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TreeNodeExV",4,SWIGTYPE_p_va_list);
+//   }
+//   arg4 = *argp4;
   
-  result = (bool)ImGui::TreeNodeExV((char const *)arg1,arg2,(char const *)arg3,arg4);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg;
+//   result = (bool)ImGui::TreeNodeExV((char const *)arg1,arg2,(char const *)arg3,arg4);
+//   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
 
 static int _wrap_TreeNodeExV__SWIG_1(lua_State* L) {
   int SWIG_arg = 0;
-  void *arg1 = (void *) 0 ;
-  ImGuiTreeNodeFlags arg2 ;
-  char *arg3 = (char *) 0 ;
-  va_list arg4 ;
-  va_list *argp4 ;
-  bool result;
+//   void *arg1 = (void *) 0 ;
+//   ImGuiTreeNodeFlags arg2 ;
+//   char *arg3 = (char *) 0 ;
+//   va_list arg4 ;
+//   va_list *argp4 ;
+//   bool result;
   
-  SWIG_check_num_args("ImGui::TreeNodeExV",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ImGui::TreeNodeExV",1,"void const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ImGui::TreeNodeExV",2,"ImGuiTreeNodeFlags");
-  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("ImGui::TreeNodeExV",3,"char const *");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ImGui::TreeNodeExV",4,"va_list");
-  arg1=(void *)SWIG_MustGetPtr(L,1,0,0,1,"TreeNodeExV");
-  arg2 = (ImGuiTreeNodeFlags)lua_tonumber(L, 2);
-  arg3 = (char *)lua_tostring(L, 3);
+//   SWIG_check_num_args("ImGui::TreeNodeExV",4,4)
+//   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ImGui::TreeNodeExV",1,"void const *");
+//   if(!lua_isnumber(L,2)) SWIG_fail_arg("ImGui::TreeNodeExV",2,"ImGuiTreeNodeFlags");
+//   if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("ImGui::TreeNodeExV",3,"char const *");
+//   if(!lua_isuserdata(L,4)) SWIG_fail_arg("ImGui::TreeNodeExV",4,"va_list");
+//   arg1=(void *)SWIG_MustGetPtr(L,1,0,0,1,"TreeNodeExV");
+//   arg2 = (ImGuiTreeNodeFlags)lua_tonumber(L, 2);
+//   arg3 = (char *)lua_tostring(L, 3);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("TreeNodeExV",4,SWIGTYPE_p_va_list);
-  }
-  arg4 = *argp4;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("TreeNodeExV",4,SWIGTYPE_p_va_list);
+//   }
+//   arg4 = *argp4;
   
-  result = (bool)ImGui::TreeNodeExV((void const *)arg1,arg2,(char const *)arg3,arg4);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg;
+//   result = (bool)ImGui::TreeNodeExV((void const *)arg1,arg2,(char const *)arg3,arg4);
+//   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
 
 static int _wrap_TreeNodeExV(lua_State* L) {
-  int argc;
-  int argv[5]={
-    1,2,3,4,5
-  };
+  // int argc;
+  // int argv[5]={
+  //   1,2,3,4,5
+  // };
   
-  argc = lua_gettop(L);
-  if (argc == 4) {
-    int _v;
-    {
-      void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, 0, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        {
-          _v = SWIG_lua_isnilstring(L,argv[2]);
-        }
-        if (_v) {
-          {
-            void *ptr;
-            if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
-              _v = 0;
-            } else {
-              _v = 1;
-            }
-          }
-          if (_v) {
-            return _wrap_TreeNodeExV__SWIG_1(L);
-          }
-        }
-      }
-    }
-  }
-  if (argc == 4) {
-    int _v;
-    {
-      _v = SWIG_lua_isnilstring(L,argv[0]);
-    }
-    if (_v) {
-      {
-        _v = lua_isnumber(L,argv[1]);
-      }
-      if (_v) {
-        {
-          _v = SWIG_lua_isnilstring(L,argv[2]);
-        }
-        if (_v) {
-          {
-            void *ptr;
-            if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
-              _v = 0;
-            } else {
-              _v = 1;
-            }
-          }
-          if (_v) {
-            return _wrap_TreeNodeExV__SWIG_0(L);
-          }
-        }
-      }
-    }
-  }
+  // argc = lua_gettop(L);
+  // if (argc == 4) {
+  //   int _v;
+  //   {
+  //     void *ptr;
+  //     if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, 0, 0)) {
+  //       _v = 0;
+  //     } else {
+  //       _v = 1;
+  //     }
+  //   }
+  //   if (_v) {
+  //     {
+  //       _v = lua_isnumber(L,argv[1]);
+  //     }
+  //     if (_v) {
+  //       {
+  //         _v = SWIG_lua_isnilstring(L,argv[2]);
+  //       }
+  //       if (_v) {
+  //         {
+  //           void *ptr;
+  //           if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
+  //             _v = 0;
+  //           } else {
+  //             _v = 1;
+  //           }
+  //         }
+  //         if (_v) {
+  //           return _wrap_TreeNodeExV__SWIG_1(L);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // if (argc == 4) {
+  //   int _v;
+  //   {
+  //     _v = SWIG_lua_isnilstring(L,argv[0]);
+  //   }
+  //   if (_v) {
+  //     {
+  //       _v = lua_isnumber(L,argv[1]);
+  //     }
+  //     if (_v) {
+  //       {
+  //         _v = SWIG_lua_isnilstring(L,argv[2]);
+  //       }
+  //       if (_v) {
+  //         {
+  //           void *ptr;
+  //           if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_va_list, SWIG_POINTER_NO_NULL)) {
+  //             _v = 0;
+  //           } else {
+  //             _v = 1;
+  //           }
+  //         }
+  //         if (_v) {
+  //           return _wrap_TreeNodeExV__SWIG_0(L);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'TreeNodeExV'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    ImGui::TreeNodeExV(char const *,ImGuiTreeNodeFlags,char const *,va_list)\n"
-    "    ImGui::TreeNodeExV(void const *,ImGuiTreeNodeFlags,char const *,va_list)\n");
-  lua_error(L);return 0;
+  // SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'TreeNodeExV'\n"
+  //   "  Possible C/C++ prototypes are:\n"
+  //   "    ImGui::TreeNodeExV(char const *,ImGuiTreeNodeFlags,char const *,va_list)\n"
+  //   "    ImGui::TreeNodeExV(void const *,ImGuiTreeNodeFlags,char const *,va_list)\n");
+  // lua_error(L);
+  return 0;
 }
 
 
@@ -26864,28 +26866,28 @@ fail:
 
 static int _wrap_SetTooltipV(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  va_list arg2 ;
-  va_list *argp2 ;
+//   char *arg1 = (char *) 0 ;
+//   va_list arg2 ;
+//   va_list *argp2 ;
   
-  SWIG_check_num_args("ImGui::SetTooltipV",2,2)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::SetTooltipV",1,"char const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::SetTooltipV",2,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
+//   SWIG_check_num_args("ImGui::SetTooltipV",2,2)
+//   if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImGui::SetTooltipV",1,"char const *");
+//   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ImGui::SetTooltipV",2,"va_list");
+//   arg1 = (char *)lua_tostring(L, 1);
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("SetTooltipV",2,SWIGTYPE_p_va_list);
-  }
-  arg2 = *argp2;
+//   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_va_list,0))){
+//     SWIG_fail_ptr("SetTooltipV",2,SWIGTYPE_p_va_list);
+//   }
+//   arg2 = *argp2;
   
-  ImGui::SetTooltipV((char const *)arg1,arg2);
+//   ImGui::SetTooltipV((char const *)arg1,arg2);
   
-  return SWIG_arg;
+//   return SWIG_arg;
   
-  if(0) SWIG_fail;
+//   if(0) SWIG_fail;
   
-fail:
-  lua_error(L);
+// fail:
+//   lua_error(L);
   return SWIG_arg;
 }
 
@@ -46593,35 +46595,35 @@ fail:
 
 static int _wrap_ImGuiTextBuffer_appendfv(lua_State* L) {
   int SWIG_arg = 0;
-  ImGuiTextBuffer *arg1 = (ImGuiTextBuffer *) 0 ;
-  char *arg2 = (char *) 0 ;
-  va_list arg3 ;
-  va_list *argp3 ;
-  
-  SWIG_check_num_args("ImGuiTextBuffer::appendfv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ImGuiTextBuffer::appendfv",1,"ImGuiTextBuffer *");
-  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGuiTextBuffer::appendfv",2,"char const *");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGuiTextBuffer::appendfv",3,"va_list");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ImGuiTextBuffer,0))){
-    SWIG_fail_ptr("ImGuiTextBuffer_appendfv",1,SWIGTYPE_p_ImGuiTextBuffer);
-  }
-  
-  arg2 = (char *)lua_tostring(L, 2);
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("ImGuiTextBuffer_appendfv",3,SWIGTYPE_p_va_list);
-  }
-  arg3 = *argp3;
-  
-  (arg1)->appendfv((char const *)arg2,arg3);
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
+//  ImGuiTextBuffer *arg1 = (ImGuiTextBuffer *) 0 ;
+//  char *arg2 = (char *) 0 ;
+//  va_list arg3 ;
+//  va_list *argp3 ;
+//  
+//  SWIG_check_num_args("ImGuiTextBuffer::appendfv",3,3)
+//  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ImGuiTextBuffer::appendfv",1,"ImGuiTextBuffer *");
+//  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ImGuiTextBuffer::appendfv",2,"char const *");
+//  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ImGuiTextBuffer::appendfv",3,"va_list");
+//  
+//  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ImGuiTextBuffer,0))){
+//    SWIG_fail_ptr("ImGuiTextBuffer_appendfv",1,SWIGTYPE_p_ImGuiTextBuffer);
+//  }
+//  
+//  arg2 = (char *)lua_tostring(L, 2);
+//  
+//  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_va_list,0))){
+//    SWIG_fail_ptr("ImGuiTextBuffer_appendfv",3,SWIGTYPE_p_va_list);
+//  }
+//  arg3 = *argp3;
+//  
+//  (arg1)->appendfv((char const *)arg2,arg3);
+//  
+//  return SWIG_arg;
+//  
+//  if(0) SWIG_fail;
+//  
+//fail:
+//  lua_error(L);
   return SWIG_arg;
 }
 
@@ -70314,36 +70316,36 @@ fail:
 
 static int _wrap_ImFormatStringV(lua_State* L) {
   int SWIG_arg = 0;
-  char *arg1 = (char *) 0 ;
-  size_t arg2 ;
-  char *arg3 = (char *) 0 ;
-  va_list arg4 ;
-  va_list *argp4 ;
-  int result;
-  
-  SWIG_check_num_args("ImFormatStringV",4,4)
-  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImFormatStringV",1,"char *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ImFormatStringV",2,"size_t");
-  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("ImFormatStringV",3,"char const *");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ImFormatStringV",4,"va_list");
-  arg1 = (char *)lua_tostring(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
-  arg2 = (size_t)lua_tonumber(L, 2);
-  arg3 = (char *)lua_tostring(L, 3);
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_va_list,0))){
-    SWIG_fail_ptr("ImFormatStringV",4,SWIGTYPE_p_va_list);
-  }
-  arg4 = *argp4;
-  
-  result = (int)ImFormatStringV(arg1,arg2,(char const *)arg3,arg4);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
+//  char *arg1 = (char *) 0 ;
+//  size_t arg2 ;
+//  char *arg3 = (char *) 0 ;
+//  va_list arg4 ;
+//  va_list *argp4 ;
+//  int result;
+//
+//  SWIG_check_num_args("ImFormatStringV",4,4)
+//  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ImFormatStringV",1,"char *");
+//  if(!lua_isnumber(L,2)) SWIG_fail_arg("ImFormatStringV",2,"size_t");
+//  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("ImFormatStringV",3,"char const *");
+//  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ImFormatStringV",4,"va_list");
+//  arg1 = (char *)lua_tostring(L, 1);
+//  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
+//  arg2 = (size_t)lua_tonumber(L, 2);
+//  arg3 = (char *)lua_tostring(L, 3);
+//
+//  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_va_list,0))){
+//    SWIG_fail_ptr("ImFormatStringV",4,SWIGTYPE_p_va_list);
+//  }
+//  arg4 = *argp4;
+//
+//  result = (int)ImFormatStringV(arg1,arg2,(char const *)arg3,arg4);
+//  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+//  return SWIG_arg;
+//
+//  if(0) SWIG_fail;
+//
+//fail:
+//  lua_error(L);
   return SWIG_arg;
 }
 
