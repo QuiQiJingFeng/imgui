@@ -79,8 +79,8 @@
 		14DF65F6254D84E600FBA310 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 14DF65F2254D84E600FBA310 /* src */; };
 		14DF65F9254D973800FBA310 /* lfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 14DF65F8254D973800FBA310 /* lfs.c */; };
 		14DF65FA254D973800FBA310 /* lfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 14DF65F8254D973800FBA310 /* lfs.c */; };
-		14DF65FE254EC42600FBA310 /* Boolean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DF65FC254EC42600FBA310 /* Boolean.cpp */; };
-		14DF65FF254EC42600FBA310 /* Boolean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DF65FC254EC42600FBA310 /* Boolean.cpp */; };
+		14DF66152551C21200FBA310 /* Bool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DF66142551C21200FBA310 /* Bool.cpp */; };
+		14DF66162551C21200FBA310 /* Bool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DF66142551C21200FBA310 /* Bool.cpp */; };
 		8307E7CC20E9F9C900473790 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8307E7CB20E9F9C900473790 /* ViewController.mm */; };
 		8307E7CF20E9F9C900473790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8307E7CD20E9F9C900473790 /* Main.storyboard */; };
 		8307E7DE20E9F9C900473790 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307E7DD20E9F9C900473790 /* AppDelegate.m */; };
@@ -177,8 +177,9 @@
 		14DF65F2254D84E600FBA310 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
 		14DF65F7254D973800FBA310 /* lfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lfs.h; path = ../../libs/lua/lfs.h; sourceTree = "<group>"; };
 		14DF65F8254D973800FBA310 /* lfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lfs.c; path = ../../libs/lua/lfs.c; sourceTree = "<group>"; };
-		14DF65FC254EC42600FBA310 /* Boolean.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Boolean.cpp; path = ../../../baseType/Boolean.cpp; sourceTree = "<group>"; };
-		14DF65FD254EC42600FBA310 /* Boolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Boolean.h; path = ../../../baseType/Boolean.h; sourceTree = "<group>"; };
+		14DF66122551BF6900FBA310 /* imgui_lua_binding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui_lua_binding.h; path = ../../imgui_lua_binding.h; sourceTree = "<group>"; };
+		14DF66132551C21100FBA310 /* Bool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bool.h; path = ../../Bool.h; sourceTree = "<group>"; };
+		14DF66142551C21200FBA310 /* Bool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bool.cpp; path = ../../Bool.cpp; sourceTree = "<group>"; };
 		8307E7BB20E9F9C700473790 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		8307E7BC20E9F9C700473790 /* Renderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
 		8307E7C420E9F9C900473790 /* example_apple_metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_apple_metal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,19 +314,9 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		14DF65FB254EC41A00FBA310 /* baseType */ = {
-			isa = PBXGroup;
-			children = (
-				14DF65FC254EC42600FBA310 /* Boolean.cpp */,
-				14DF65FD254EC42600FBA310 /* Boolean.h */,
-			);
-			path = baseType;
-			sourceTree = "<group>";
-		};
 		8307E7B520E9F9C700473790 = {
 			isa = PBXGroup;
 			children = (
-				14DF65FB254EC41A00FBA310 /* baseType */,
 				14DF64EB254D80E000FBA310 /* lua */,
 				83BBE9F020EB544400295997 /* imgui */,
 				8307E7BA20E9F9C700473790 /* Shared */,
@@ -400,6 +391,9 @@
 		83BBE9F020EB544400295997 /* imgui */ = {
 			isa = PBXGroup;
 			children = (
+				14DF66142551C21200FBA310 /* Bool.cpp */,
+				14DF66132551C21100FBA310 /* Bool.h */,
+				14DF66122551BF6900FBA310 /* imgui_lua_binding.h */,
 				83BBEA0420EB54E700295997 /* imconfig.h */,
 				83BBEA0320EB54E700295997 /* imgui.cpp */,
 				83BBEA0020EB54E700295997 /* imgui.h */,
@@ -542,11 +536,11 @@
 				14DF65EC254D83DE00FBA310 /* lcorolib.c in Sources */,
 				83BBE9DF20EB40AE00295997 /* AppDelegate.m in Sources */,
 				14DF65BC254D83DE00FBA310 /* loadlib.c in Sources */,
+				14DF66152551C21200FBA310 /* Bool.cpp in Sources */,
 				14DF65DE254D83DE00FBA310 /* ltable.c in Sources */,
 				83BBEA0920EB54E700295997 /* imgui.cpp in Sources */,
 				14DF65B2254D83DE00FBA310 /* loslib.c in Sources */,
 				14DF65DA254D83DE00FBA310 /* liolib.c in Sources */,
-				14DF65FE254EC42600FBA310 /* Boolean.cpp in Sources */,
 				14DF65E2254D83DE00FBA310 /* lgc.c in Sources */,
 				14DF65C6254D83DE00FBA310 /* lcode.c in Sources */,
 				14DF65AE254D83DE00FBA310 /* lzio.c in Sources */,
@@ -567,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BBE9E020EB42D000295997 /* ViewController.mm in Sources */,
+				14DF66162551C21200FBA310 /* Bool.cpp in Sources */,
 				14DF65D1254D83DE00FBA310 /* lobject.c in Sources */,
 				14DF65CB254D83DE00FBA310 /* lmathlib.c in Sources */,
 				14DF65BB254D83DE00FBA310 /* ltm.c in Sources */,
@@ -602,7 +597,6 @@
 				14DF65BD254D83DE00FBA310 /* loadlib.c in Sources */,
 				14DF65C9254D83DE00FBA310 /* ldblib.c in Sources */,
 				836D2A2E20EE208E0098E909 /* imgui_impl_osx.mm in Sources */,
-				14DF65FF254EC42600FBA310 /* Boolean.cpp in Sources */,
 				14DF65CD254D83DE00FBA310 /* lvm.c in Sources */,
 				14DF65E7254D83DE00FBA310 /* linit.c in Sources */,
 				14DF65C5254D83DE00FBA310 /* lstate.c in Sources */,
@@ -778,6 +772,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = baseType;
 				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info-macOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -794,6 +789,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = baseType;
 				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info-macOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
