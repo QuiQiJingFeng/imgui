@@ -8,6 +8,12 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="lua">
+      <UniqueIdentifier>{4939cc4e-8f3b-46aa-a74c-a4ea74c82ac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tolua">
+      <UniqueIdentifier>{cd9a61a5-250a-4146-829f-3b5fd70e5367}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -31,6 +37,126 @@
     <ClCompile Include="..\..\backends\imgui_impl_opengl2.cpp">
       <Filter>sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\libs\lua\lgc.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\linit.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\liolib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\llex.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lmathlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lmem.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\loadlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lobject.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lopcodes.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\loslib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lparser.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lstate.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lstring.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lstrlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\ltable.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\ltablib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\ltm.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lundump.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lvm.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lzio.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\print.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lapi.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lauxlib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lbaselib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lcode.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\ldblib.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\ldebug.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\ldo.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\ldump.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\lua\lfunc.c">
+      <Filter>lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\tolua_event.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\tolua_is.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\tolua_map.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\tolua_push.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\tolua_to.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\Boolean.cpp">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\imgui_binding.cpp">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\Integer.cpp">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\LuaBasicConversions.cpp">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\tolua\Floater.cpp">
+      <Filter>tolua</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\imconfig.h">
@@ -47,6 +173,96 @@
     </ClInclude>
     <ClInclude Include="..\..\backends\imgui_impl_opengl2.h">
       <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lfunc.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lgc.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\llex.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\llimits.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lmem.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lobject.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lopcodes.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lparser.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lstate.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lstring.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\ltable.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\ltm.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lua.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\luaconf.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lualib.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lundump.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lvm.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lzio.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lapi.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lauxlib.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\lcode.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\ldebug.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\lua\ldo.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\tolua\LuaBasicConversions.h">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\tolua\tolua_event.h">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\tolua\tolua++.h">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\tolua\Boolean.h">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\tolua\imgui_binding.hpp">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\tolua\Integer.h">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\tolua\Floater.h">
+      <Filter>tolua</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

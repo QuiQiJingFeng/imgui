@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -28,27 +28,27 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -90,7 +90,7 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..;..\..\backends;..\libs\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..;..\..\backends;..\libs\glfw\include;E:\IMGUI\custom\imgui\examples\libs\lua;E:\IMGUI\custom\imgui\examples\libs\tolua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -161,6 +161,46 @@
     <ClCompile Include="..\..\imgui_widgets.cpp" />
     <ClCompile Include="..\..\backends\imgui_impl_glfw.cpp" />
     <ClCompile Include="..\..\backends\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="..\libs\lua\lapi.c" />
+    <ClCompile Include="..\libs\lua\lauxlib.c" />
+    <ClCompile Include="..\libs\lua\lbaselib.c" />
+    <ClCompile Include="..\libs\lua\lcode.c" />
+    <ClCompile Include="..\libs\lua\ldblib.c" />
+    <ClCompile Include="..\libs\lua\ldebug.c" />
+    <ClCompile Include="..\libs\lua\ldo.c" />
+    <ClCompile Include="..\libs\lua\ldump.c" />
+    <ClCompile Include="..\libs\lua\lfunc.c" />
+    <ClCompile Include="..\libs\lua\lgc.c" />
+    <ClCompile Include="..\libs\lua\linit.c" />
+    <ClCompile Include="..\libs\lua\liolib.c" />
+    <ClCompile Include="..\libs\lua\llex.c" />
+    <ClCompile Include="..\libs\lua\lmathlib.c" />
+    <ClCompile Include="..\libs\lua\lmem.c" />
+    <ClCompile Include="..\libs\lua\loadlib.c" />
+    <ClCompile Include="..\libs\lua\lobject.c" />
+    <ClCompile Include="..\libs\lua\lopcodes.c" />
+    <ClCompile Include="..\libs\lua\loslib.c" />
+    <ClCompile Include="..\libs\lua\lparser.c" />
+    <ClCompile Include="..\libs\lua\lstate.c" />
+    <ClCompile Include="..\libs\lua\lstring.c" />
+    <ClCompile Include="..\libs\lua\lstrlib.c" />
+    <ClCompile Include="..\libs\lua\ltable.c" />
+    <ClCompile Include="..\libs\lua\ltablib.c" />
+    <ClCompile Include="..\libs\lua\ltm.c" />
+    <ClCompile Include="..\libs\lua\lundump.c" />
+    <ClCompile Include="..\libs\lua\lvm.c" />
+    <ClCompile Include="..\libs\lua\lzio.c" />
+    <ClCompile Include="..\libs\lua\print.c" />
+    <ClCompile Include="..\libs\tolua\Boolean.cpp" />
+    <ClCompile Include="..\libs\tolua\Floater.cpp" />
+    <ClCompile Include="..\libs\tolua\imgui_binding.cpp" />
+    <ClCompile Include="..\libs\tolua\Integer.cpp" />
+    <ClCompile Include="..\libs\tolua\LuaBasicConversions.cpp" />
+    <ClCompile Include="..\libs\tolua\tolua_event.c" />
+    <ClCompile Include="..\libs\tolua\tolua_is.c" />
+    <ClCompile Include="..\libs\tolua\tolua_map.c" />
+    <ClCompile Include="..\libs\tolua\tolua_push.c" />
+    <ClCompile Include="..\libs\tolua\tolua_to.c" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +209,36 @@
     <ClInclude Include="..\..\imgui_internal.h" />
     <ClInclude Include="..\..\backends\imgui_impl_glfw.h" />
     <ClInclude Include="..\..\backends\imgui_impl_opengl2.h" />
+    <ClInclude Include="..\libs\lua\lapi.h" />
+    <ClInclude Include="..\libs\lua\lauxlib.h" />
+    <ClInclude Include="..\libs\lua\lcode.h" />
+    <ClInclude Include="..\libs\lua\ldebug.h" />
+    <ClInclude Include="..\libs\lua\ldo.h" />
+    <ClInclude Include="..\libs\lua\lfunc.h" />
+    <ClInclude Include="..\libs\lua\lgc.h" />
+    <ClInclude Include="..\libs\lua\llex.h" />
+    <ClInclude Include="..\libs\lua\llimits.h" />
+    <ClInclude Include="..\libs\lua\lmem.h" />
+    <ClInclude Include="..\libs\lua\lobject.h" />
+    <ClInclude Include="..\libs\lua\lopcodes.h" />
+    <ClInclude Include="..\libs\lua\lparser.h" />
+    <ClInclude Include="..\libs\lua\lstate.h" />
+    <ClInclude Include="..\libs\lua\lstring.h" />
+    <ClInclude Include="..\libs\lua\ltable.h" />
+    <ClInclude Include="..\libs\lua\ltm.h" />
+    <ClInclude Include="..\libs\lua\lua.h" />
+    <ClInclude Include="..\libs\lua\luaconf.h" />
+    <ClInclude Include="..\libs\lua\lualib.h" />
+    <ClInclude Include="..\libs\lua\lundump.h" />
+    <ClInclude Include="..\libs\lua\lvm.h" />
+    <ClInclude Include="..\libs\lua\lzio.h" />
+    <ClInclude Include="..\libs\tolua\Boolean.h" />
+    <ClInclude Include="..\libs\tolua\Floater.h" />
+    <ClInclude Include="..\libs\tolua\imgui_binding.hpp" />
+    <ClInclude Include="..\libs\tolua\Integer.h" />
+    <ClInclude Include="..\libs\tolua\LuaBasicConversions.h" />
+    <ClInclude Include="..\libs\tolua\tolua++.h" />
+    <ClInclude Include="..\libs\tolua\tolua_event.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\misc\natvis\imgui.natvis" />
